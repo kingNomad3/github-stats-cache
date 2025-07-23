@@ -14,7 +14,7 @@ jobs:
 
       - name: Download GitHub stats SVG
         run: |
-          curl -o github-stats.svg "https://github-readme-stats-kingnomads-projects.vercel.app/api?username=kingNomad3&show_icons=true&count_private=true&theme=radical"
+          curl -L -H "Accept: image/svg+xml" -o github-stats.svg "https://github-readme-stats-kingnomads-projects.vercel.app/api?username=kingNomad3&show_icons=true&count_private=true&theme=radical"
 
       - name: Commit and push
         run: |
